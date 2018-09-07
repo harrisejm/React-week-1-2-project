@@ -11,15 +11,16 @@ import background from '../img/background.jpg';
 
 let mainSyles = {
   backgroundImage: `url(${background})`,
-   backgroundRepeat: "no-repeat",
-   backgroundSize: "cover",
-   backgroundAttachment: "fixed",
-   minHeight: "800px"
+  backgroundRepeat: "no-repeat",
+  backgroundSize: "cover",
+  backgroundAttachment: "fixed",
+  minHeight: "800px"
 }
 let mainBox = {
+  marginTop: "30px",
   marginRight: "auto",
   marginLeft: "auto",
-  width: "400px",
+  width: "450px",
   border: "solid",
   backgroundColor: "white",
   opacity: ".9"
@@ -27,20 +28,23 @@ let mainBox = {
 
 function App(){
   return (
+
     <div style={mainSyles}>
-    <div className="container">
       <Header/>
-       <div style={mainBox}>
-        <Switch>
-          <Route exact path='/' component={BrewList} />
-          <Route exact path='/IrishCoffee' component={IrishCoffee} />
-          <Route exact path='/Hefeweizen' component={Hefeweizen} />
-          <Route exact path='/OrangeHefeweizen' component={OrangeHefeweizen} />
-          <Route component={Error404} />
-        </Switch>
+      <div className="container">
+
+        <div style={mainBox}>
+          <Switch>
+            <Route exact path='/' component={BrewList} />
+            <Route exact path='/IrishCoffee' component={IrishCoffee} />
+            <Route exact path='/Hefeweizen' component={Hefeweizen} />
+            <Route exact path='/OrangeHefeweizen' component={OrangeHefeweizen} />
+            <Route component={Error404} />
+          </Switch>
+        </div>
+      </div>
     </div>
-    </div>
-    </div>
+
   );
 }
 

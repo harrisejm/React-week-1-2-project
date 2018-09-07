@@ -13,14 +13,16 @@ This is website for "Eddie's Brew House". Created with React.
 
 - 1.) A user can view a list of all beverages available for purchase.
 
-- 2.) A user can click on a beverage to view details about that beverage. Details include beverage name, beverage, beverage type, price and remaining inventory.
+- 2.) A user can view the beverage name, beverage, beverage type, price and remaining inventory.
+
+- 3.) A user can click on a beverage to view details about that beverage.
 
 ## Assignment prompts
 
 - 1.) ## Notes:
         - So far there have been no unforeseen issues in development.
 
-- 2.) The main difference between React and Angular, that I have encountered, is how styling is implemented. In Angular, styling was strait forward, the syntax was identical to all previous projects. In React, styling can be added multiple ways, and tasks such as adding an image require additional steps. Up to this point, designing the front end portion is React is slightly more tedious than in Angular.
+- 2.) The main difference between React and Angular, that I have encountered, is how styling is implemented. In Angular, styling was strait forward, the syntax was identical to all previous projects. In React, styling can be implemented multiple ways. Tasks such as adding an image require additional steps. Up to this point, designing the front end portion is React is slightly more tedious than in Angular.
 
 ## Setup
 
