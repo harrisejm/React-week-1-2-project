@@ -1,4 +1,5 @@
 import React from 'react';
+import Error404 from './Error404';
 import Header from './Header';
 import BrewList from './BrewList';
 import IrishCoffee from './IrishCoffee';
@@ -6,6 +7,7 @@ import Hefeweizen from './Hefeweizen';
 import OrangeHefeweizen from './OrangeHefeweizen';
 import { Switch, Route } from 'react-router-dom';
 import background from '../img/background.jpg';
+
 
 let mainSyles = {
   backgroundImage: `url(${background})`,
@@ -34,6 +36,7 @@ function App(){
           <Route exact path='/IrishCoffee' component={IrishCoffee} />
           <Route exact path='/Hefeweizen' component={Hefeweizen} />
           <Route exact path='/OrangeHefeweizen' component={OrangeHefeweizen} />
+          <Route component={Error404} />
         </Switch>
     </div>
     </div>
