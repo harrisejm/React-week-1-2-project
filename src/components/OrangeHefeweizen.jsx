@@ -2,7 +2,7 @@ import React from 'react';
 
 function OrangeHefeweizen(){
   return (
-    <div className="container">
+    <div>
       <h1>Orange Hefeweizen</h1>
     </div>
   );

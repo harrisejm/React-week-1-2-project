@@ -2,8 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 let brewStyles = {
-  width: "500px",
-  borderBottom: "solid"
+
+  borderBottom: "solid",
+  margin: "10px"
 
 }
 
