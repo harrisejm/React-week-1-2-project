@@ -1,11 +1,13 @@
-import React from "react";
-import Header from "./Header";
+import React from 'react';
+import Header from './Header';
+import BrewList from './BrewList';
 
 function App(){
   return (
     <div>
-    <Header/>
-    <p>Test</p>
+      <Header/>
+      <BrewList/>
+      <p>Test</p>
 
     </div>
   );
