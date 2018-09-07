@@ -5,6 +5,10 @@ import { AppContainer } from 'react-hot-loader';
 import { HashRouter } from 'react-router-dom';
 import { Switch, Route } from 'react-router-dom';
 
+import $ from 'jquery';
+import popper from 'popper.js'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 const render = (Component) => {
   ReactDOM.render(
     <AppContainer>

@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Header(){
+function Hefeweizen(){
   return (
-    <div>
+    <div className="container">
       <h1>Hefeweizen</h1>
     </div>
   );
 }
 
-export default Header;
+export default Hefeweizen;

@@ -32,7 +32,7 @@ let fullBrewList = [
 
 function BrewList(){
   return (
-    <div>
+    <div className="container"> 
       { fullBrewList.map((brew, index) =>
         <Link to={brew.details}>
           <Brew name={brew.name}

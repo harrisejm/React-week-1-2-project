@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Header(){
+function OrangeHefeweizen(){
   return (
-    <div>
+    <div className="container">
       <h1>Orange Hefeweizen</h1>
     </div>
   );
 }
 
-export default Header;
+export default OrangeHefeweizen;
