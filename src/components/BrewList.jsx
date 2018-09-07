@@ -10,21 +10,23 @@ let fullBrewList = [
     price: '$7.00',
     inventory: '97',
     details: "/IrishCoffee"
+  },
+  {
+    name: 'NW Hefeweizen',
+    type: 'Hefeweizen',
+    description: 'Wheat Beer',
+    price: '$5.00',
+    inventory: '67',
+    details: "/Hefeweizen"
+  },
+  {
+    name: 'NW Orange Hefeweizen',
+    type: 'Hefeweizen',
+    description: 'Wheat Beer with a hint of orange',
+    price: '$5.00',
+    inventory: '129',
+    details: "/OrangeHefeweizen"
   }
-  // {
-  //   name: 'NW Hefeweizen',
-  //   type: 'Hefeweizen',
-  //   description: 'Wheat Beer',
-  //   price: '$5.00',
-  //   inventory: '67'
-  // },
-  // {
-  //   name: 'NW Orange Hefeweizen',
-  //   type: 'Hefeweizen',
-  //   description: 'Wheat Beer with a hint of orange',
-  //   price: '$5.00',
-  //   inventory: '129'
-  // }
 ];
 
 
