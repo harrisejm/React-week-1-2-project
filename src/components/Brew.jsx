@@ -14,10 +14,10 @@ function Brew(props){
     <div style={brewStyles}>
       <h3>{props.name}</h3>
       <ul>
-        <li>{props.type}</li>
-        <li>{props.description}</li>
-        <li>{props.price}</li>
-        <li>{props.inventory}</li>
+        <li>Drink Type: {props.type}</li>
+        <li>Description: {props.description}</li>
+        <li>Price: {props.price}</li>
+        <li>Remaining stock: {props.inventory}</li>
       </ul>
     </div>
 
@@ -29,7 +29,8 @@ Brew.propTypes = {
   type: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
-  inventory: PropTypes.string.isRequired
+  inventory: PropTypes.string.isRequired,
+  details: PropTypes.string.isRequired
 };
 
 export default Brew;
