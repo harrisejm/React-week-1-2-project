@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from "prop-types";
 
 let forms = {
   marginLeft: "10px"
@@ -16,51 +17,67 @@ let moveLable4 = {
   marginLeft: "63px"
 }
 
+function NewBrewForm(props){
+  let _names = null;
+  let _description = null;
+  let _price = null;
+  let _stock = null;
 
-function NewTicketForm(){
+  _names.value = "";
+  _description.value = "";
+  _price.value = "";
+  _stock.value = "";
+
+  function handleNewBrewFormSubmission(event) {
+    event.preventDefault();
+  }
+
   return (
     <div>
 
-
-        <form>
-          <div style={forms}>
+      <form onSubmit={handleNewBrewFormSubmission}>
+        <div style={forms}>
           <lable>Name: </lable>
 
           <input
             style={moveLable1}
             type='text'
             id='name'
-            placeholder='Beer Name'/>
+            placeholder='Beer Name'
+            ref={(input) => {_name = input;}}/>
         </div>
         <br/>
 
         <div style={forms}>
           <lable>Description: </lable>
           <input
-              style={moveLable2}
+            style={moveLable2}
             type='text'
             id='description'
-            placeholder='Description'/>
+            placeholder='Description'
+            ref={(input) => {_description = input;}}/>
         </div>
         <br/>
 
         <div style={forms}>
           <lable>Price: </lable>
           <input
-              style={moveLable3}
+            style={moveLable3}
             type='text'
             id='price'
-            placeholder='Price'/>
+            placeholder='Price'
+            ref={(input) => {_price = input;}}/>
         </div>
         <br/>
 
         <div style={forms}>
           <lable>Stock: </lable>
           <input
-              style={moveLable4}
+            style={moveLable4}
             type='text'
             id='stock'
-            placeholder='Stock'/>
+            placeholder='Stock'
+            ref={(input) => {_stock = input;}}/>
         </div>
         <br/>
         <div style={forms}>
@@ -71,4 +88,8 @@ function NewTicketForm(){
   );
 }
 
-export default NewTicketForm;
+NewTicketControl.propTypes = {
+  onNewTicketCreation: PropTypes.func
+};
+
+export default NewBrewForm;

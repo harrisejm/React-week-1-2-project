@@ -28,7 +28,25 @@ let mainBox = {
   opacity: ".9"
 }
 
-function App(){
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      masterBrewList: []
+    };
+    this.handleNewBrew = this.handleNewBrew.bind(this);
+  }
+
+  handleNewBrew(newBrew){
+     var newBrewList = this.state.masterBrewList.slice();
+     newBrewList.push(newBrew);
+     this.setState({masterBrewList: newBrewList});
+   }
+
+
+
+  render(){
   return (
 
     <div style={mainSyles}>
@@ -38,7 +56,7 @@ function App(){
         <div style={mainBox}>
           <Switch>
             <Route exact path='/' component={BrewList} />
-            <Route exact path='/NewBrewForm' component={NewBrewForm} />
+            <Route exact path='/NewBrewForm' render={()=><NewBrewForm onNewBrewCreation={this.handleNewBrew} />} />
             <Route exact path='/IrishCoffee' component={IrishCoffee} />
             <Route exact path='/Hefeweizen' component={Hefeweizen} />
             <Route exact path='/OrangeHefeweizen' component={OrangeHefeweizen} />
@@ -49,6 +67,7 @@ function App(){
     </div>
 
   );
+}
 }
 
 export default App;
