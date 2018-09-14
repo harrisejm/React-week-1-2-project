@@ -15,7 +15,12 @@ This is website for "Eddie's Brew House". Created with React.
 
 - 2.) A user can view the beverage name, beverage, beverage type, price and remaining inventory.
 
-- 3.) A user can click on a beverage to view details about that beverage.
+- 3.) A user can click on a beverage from the FEATURED list to view details about that beverage. Beverages on this list will always be available.
+
+- 4.) A user can add beverages to a rotating tap list.
+
+![Component Tree](/src/img/1.jpg)
+
 
 ## Assignment prompts
 
