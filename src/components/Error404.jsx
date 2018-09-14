@@ -11,11 +11,10 @@ let dogeImg = {
   height: "100%"
 }
 
-
 function Error404(props){
   return (
     <div style={errorStyles}>
-       <img style={dogeImg} src={doge}/>
+      <img style={dogeImg} src={doge}/>
       <h2>BARK!!! {props.location.pathname} does not exist!</h2>
       <p>Return <Link to="/">home</Link>?</p>
     </div>

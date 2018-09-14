@@ -57,16 +57,16 @@ function NewBrewForm(props){
         </div>
         <br/>
 
-          <div style={forms}>
-            <lable>Drink Type: </lable>
-            <input
-              style={moveLable5}
-              type='text'
-              id='type'
-              placeholder='Drink Type'
-              ref={(input) => {_type = input;}}/>
-          </div>
-<br/>
+        <div style={forms}>
+          <lable>Drink Type: </lable>
+          <input
+            style={moveLable5}
+            type='text'
+            id='type'
+            placeholder='Drink Type'
+            ref={(input) => {_type = input;}}/>
+        </div>
+        <br/>
         <div style={forms}>
           <lable>Description: </lable>
           <input
@@ -88,7 +88,7 @@ function NewBrewForm(props){
             ref={(input) => {_price = input;}}/>
         </div>
         <br/>
-
+        
         <div style={forms}>
           <lable>Stock: </lable>
           <input

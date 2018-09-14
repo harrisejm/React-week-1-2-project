@@ -30,7 +30,6 @@ let fullBrewList = [
   }
 ];
 
-
 function BrewList(props){
   return (
     <div>
@@ -38,23 +37,22 @@ function BrewList(props){
       { fullBrewList.map((brew, index) =>
         <Link to={brew.details}>
           <Brew name={brew.name}
-          type={brew.type}
-          description={brew.description}
-          price={brew.price}
-          inventory={brew.inventory}
-          key={index}/>
+            type={brew.type}
+            description={brew.description}
+            price={brew.price}
+            inventory={brew.inventory}
+            key={index}/>
         </Link>
       )}
       <hr/>
       <h1>Rotating Tap</h1>
       { props.brewList.map((newBrew) =>
-          <Brew name={newBrew.name}
+        <Brew name={newBrew.name}
           type={newBrew.type}
           description={newBrew.description}
           price={newBrew.price}
           inventory={newBrew.inventory}
           key={newBrew.id}/>
-
       )}
     </div>
   );

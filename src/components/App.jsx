@@ -6,10 +6,8 @@ import IrishCoffee from './IrishCoffee';
 import Hefeweizen from './Hefeweizen';
 import OrangeHefeweizen from './OrangeHefeweizen';
 import NewBrewForm from './NewBrewForm';
-
 import { Switch, Route } from 'react-router-dom';
 import background from '../img/background.jpg';
-
 
 let mainSyles = {
   backgroundImage: `url(${background})`,
@@ -28,7 +26,6 @@ let mainBox = {
   opacity: ".9"
 }
 
-
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -39,35 +36,30 @@ class App extends React.Component {
   }
 
   handleNewBrew(newBrew){
-     var newBrewList = this.state.masterBrewList.slice();
-     newBrewList.push(newBrew);
-     this.setState({masterBrewList: newBrewList});
-   }
-
-
+    var newBrewList = this.state.masterBrewList.slice();
+    newBrewList.push(newBrew);
+    this.setState({masterBrewList: newBrewList});
+  }
 
   render(){
-  return (
-
-    <div style={mainSyles}>
-      <Header/>
-      <div className="container">
-
-        <div style={mainBox}>
-          <Switch>
-            <Route exact path='/' render={()=><BrewList brewList={this.state.masterBrewList} />} />
-            <Route exact path='/NewBrewForm' render={()=><NewBrewForm onNewBrewCreation={this.handleNewBrew} />} />
-            <Route exact path='/IrishCoffee' component={IrishCoffee} />
-            <Route exact path='/Hefeweizen' component={Hefeweizen} />
-            <Route exact path='/OrangeHefeweizen' component={OrangeHefeweizen} />
-            <Route component={Error404} />
-          </Switch>
+    return (
+      <div style={mainSyles}>
+        <Header/>
+        <div className="container">
+          <div style={mainBox}>
+            <Switch>
+              <Route exact path='/' render={()=><BrewList brewList={this.state.masterBrewList} />} />
+              <Route exact path='/NewBrewForm' render={()=><NewBrewForm onNewBrewCreation={this.handleNewBrew} />} />
+              <Route exact path='/IrishCoffee' component={IrishCoffee} />
+              <Route exact path='/Hefeweizen' component={Hefeweizen} />
+              <Route exact path='/OrangeHefeweizen' component={OrangeHefeweizen} />
+              <Route component={Error404} />
+            </Switch>
+          </div>
         </div>
       </div>
-    </div>
-
-  );
-}
+    );
+  }
 }
 
 export default App;

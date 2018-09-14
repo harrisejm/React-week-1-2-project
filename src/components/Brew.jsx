@@ -2,15 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 let brewStyles = {
-
   borderBottom: "solid",
   margin: "10px"
-
 }
 
-
 function Brew(props){
-
   return (
     <div style={brewStyles}>
       <h3>{props.name}</h3>
@@ -21,7 +17,6 @@ function Brew(props){
         <li>Remaining stock: {props.inventory}</li>
       </ul>
     </div>
-
   );
 }
 
