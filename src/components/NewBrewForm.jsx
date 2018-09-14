@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from "prop-types";
+//import { v4 } from 'uuid';
 
 let forms = {
   marginLeft: "10px"
@@ -25,10 +26,11 @@ function NewBrewForm(props){
 
   function handleNewBrewFormSubmission(event) {
     event.preventDefault();
-    props.onNewBrewCreation({name: _name.value, description: _description.value, price: _price.value, stock: _stock.value});
+    props.onNewBrewCreation({name: _name.value, type: _type.value, description: _description.value, price: _price.value, stock: _stock.value});
 
 
     _name.value = "";
+    _type.value = "";
     _description.value = "";
     _price.value = "";
     _stock.value = "";
@@ -49,6 +51,17 @@ function NewBrewForm(props){
             ref={(input) => {_name = input;}}/>
         </div>
         <br/>
+
+          <div style={forms}>
+            <lable>Drink Type: </lable>
+            <input
+              style={moveLable2}
+              type='text'
+              id='type'
+              placeholder='Drink Type'
+              ref={(input) => {_type = input;}}/>
+          </div>
+          <br/>
 
         <div style={forms}>
           <lable>Description: </lable>
