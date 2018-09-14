@@ -18,18 +18,20 @@ let moveLable4 = {
 }
 
 function NewBrewForm(props){
-  let _names = null;
+  let _name = null;
   let _description = null;
   let _price = null;
   let _stock = null;
 
-  _names.value = "";
-  _description.value = "";
-  _price.value = "";
-  _stock.value = "";
-
   function handleNewBrewFormSubmission(event) {
     event.preventDefault();
+    props.onNewBrewCreation({name: _name.value, description: _description.value, price: _price.value, stock: _stock.value});
+
+
+    _name.value = "";
+    _description.value = "";
+    _price.value = "";
+    _stock.value = "";
   }
 
   return (
@@ -88,7 +90,7 @@ function NewBrewForm(props){
   );
 }
 
-NewTicketControl.propTypes = {
+NewBrewForm.propTypes = {
   onNewTicketCreation: PropTypes.func
 };
 

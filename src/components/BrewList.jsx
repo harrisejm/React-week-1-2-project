@@ -1,5 +1,6 @@
 import React from 'react';
 import Brew from './Brew';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 let fullBrewList = [
@@ -30,9 +31,10 @@ let fullBrewList = [
 ];
 
 
-function BrewList(){
+function BrewList(props){
   return (
     <div>
+      <h1>Featured List</h1>
       { fullBrewList.map((brew, index) =>
         <Link to={brew.details}>
           <Brew name={brew.name}
@@ -43,8 +45,23 @@ function BrewList(){
           key={index}/>
         </Link>
       )}
+      <hr/>
+      <h1>Rotating Tap</h1>
+      { props.brewList.map((brew, index) =>
+          <Brew name={brew.name}
+          type={brew.type}
+          description={brew.description}
+          price={brew.price}
+          inventory={brew.stock}
+          key={index}/>
+
+      )}
     </div>
   );
 }
+
+BrewList.propTypes = {
+  brewList: PropTypes.array
+};
 
 export default BrewList;

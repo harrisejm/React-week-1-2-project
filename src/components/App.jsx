@@ -55,7 +55,7 @@ class App extends React.Component {
 
         <div style={mainBox}>
           <Switch>
-            <Route exact path='/' component={BrewList} />
+            <Route exact path='/' render={()=><BrewList brewList={this.state.masterBrewList} />} />
             <Route exact path='/NewBrewForm' render={()=><NewBrewForm onNewBrewCreation={this.handleNewBrew} />} />
             <Route exact path='/IrishCoffee' component={IrishCoffee} />
             <Route exact path='/Hefeweizen' component={Hefeweizen} />
