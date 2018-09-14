@@ -26,7 +26,7 @@ Brew.propTypes = {
   description: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
   inventory: PropTypes.string.isRequired,
-  details: PropTypes.string.isRequired
+  details: PropTypes.string
 };
 
 export default Brew;
