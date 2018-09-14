@@ -47,13 +47,13 @@ function BrewList(props){
       )}
       <hr/>
       <h1>Rotating Tap</h1>
-      { props.brewList.map((brew, index) =>
-          <Brew name={brew.name}
-          type={brew.type}
-          description={brew.description}
-          price={brew.price}
-          inventory={brew.stock}
-          key={index}/>
+      { props.brewList.map((newBrew) =>
+          <Brew name={newBrew.name}
+          type={newBrew.type}
+          description={newBrew.description}
+          price={newBrew.price}
+          inventory={newBrew.inventory}
+          key={newBrew.id}/>
 
       )}
     </div>

@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from "prop-types";
-//import { v4 } from 'uuid';
+import { v4 } from 'uuid';
 
 let forms = {
-  marginLeft: "10px"
+  margin: "10px"
 }
 let moveLable1 = {
   marginLeft: "60px"
@@ -17,23 +17,28 @@ let moveLable3 = {
 let moveLable4 = {
   marginLeft: "63px"
 }
+let moveLable5 = {
+  marginLeft: "22px"
+}
+
 
 function NewBrewForm(props){
   let _name = null;
+  let _type = null;
   let _description = null;
   let _price = null;
-  let _stock = null;
+  let _inventory = null;
 
   function handleNewBrewFormSubmission(event) {
     event.preventDefault();
-    props.onNewBrewCreation({name: _name.value, type: _type.value, description: _description.value, price: _price.value, stock: _stock.value});
+    props.onNewBrewCreation({name: _name.value, type: _type.value, description: _description.value, price: _price.value, inventory: _inventory.value, details: "", id: v4()});
 
 
     _name.value = "";
     _type.value = "";
     _description.value = "";
     _price.value = "";
-    _stock.value = "";
+    _inventory.value = "";
   }
 
   return (
@@ -55,14 +60,13 @@ function NewBrewForm(props){
           <div style={forms}>
             <lable>Drink Type: </lable>
             <input
-              style={moveLable2}
+              style={moveLable5}
               type='text'
               id='type'
               placeholder='Drink Type'
               ref={(input) => {_type = input;}}/>
           </div>
-          <br/>
-
+<br/>
         <div style={forms}>
           <lable>Description: </lable>
           <input
@@ -90,9 +94,9 @@ function NewBrewForm(props){
           <input
             style={moveLable4}
             type='text'
-            id='stock'
-            placeholder='Stock'
-            ref={(input) => {_stock = input;}}/>
+            id='inventory'
+            placeholder='Inventory'
+            ref={(input) => {_inventory = input;}}/>
         </div>
         <br/>
         <div style={forms}>
