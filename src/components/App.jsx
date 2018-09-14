@@ -5,6 +5,8 @@ import BrewList from './BrewList';
 import IrishCoffee from './IrishCoffee';
 import Hefeweizen from './Hefeweizen';
 import OrangeHefeweizen from './OrangeHefeweizen';
+import NewBrewForm from './NewBrewForm';
+
 import { Switch, Route } from 'react-router-dom';
 import background from '../img/background.jpg';
 
@@ -20,7 +22,7 @@ let mainBox = {
   marginTop: "30px",
   marginRight: "auto",
   marginLeft: "auto",
-  width: "450px",
+  width: "500px",
   border: "solid",
   backgroundColor: "white",
   opacity: ".9"
@@ -36,6 +38,7 @@ function App(){
         <div style={mainBox}>
           <Switch>
             <Route exact path='/' component={BrewList} />
+            <Route exact path='/NewBrewForm' component={NewBrewForm} />
             <Route exact path='/IrishCoffee' component={IrishCoffee} />
             <Route exact path='/Hefeweizen' component={Hefeweizen} />
             <Route exact path='/OrangeHefeweizen' component={OrangeHefeweizen} />

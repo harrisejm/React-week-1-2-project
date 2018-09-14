@@ -30,6 +30,7 @@ function Header(){
       <div style={main}>
       <h1 style={title}>Eddie's Brew House</h1>
       <Link style={home} to={"/"}>Home</Link>
+      <Link style={home} to={"/NewBrewForm"}>Add to Rotating Brew List</Link>
       </div>
     </div>
   );
